@@ -1,0 +1,21 @@
+#include "stdafx.h"
+#include <stdio.h>
+
+struct student{
+	int mid;
+	int hw;
+	int final;
+};
+
+int main(){
+	struct student Tom = {20, 30, 40};
+	struct student Sam = {50, 60, 70}; 
+	struct student *he = &Sam;
+
+	printf("studnet Tom : %d, %d, %d",Tom.mid, Tom.hw, Tom.final);
+	printf("srudent he : %d, %d, %d",he->mid, he->final, he->hw);
+	printf("student sam : %d, %d, %d", (*he).mid, (*he).hw,(*he).final);
+
+
+	return 0;
+} 
